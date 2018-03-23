@@ -1,7 +1,7 @@
 # 西子员工系统Vue+jQuery版
 ## 功能
 ### 登录
-账号：admin密码admin
+账号：admin密码admin或者admin2 密码123456
 输入正确的账号密码点击登录按钮调用方法路由至首页
 ### Vue-Resource
 点击登录会进行使用Vue-Resource获取Json中的数据判断账号密码是否正确
