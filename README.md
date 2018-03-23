@@ -16,5 +16,5 @@
 ## BUG
 1. 登录页面要输入两次才能正常进入主页
 2. 使用jQuery写的订餐页面使用Ajax调取菜单信息更改登录页面原本为text输入框的form标签为checkbox（已解决，原因是订餐页面使用$(form).html()。更改了登录页面的form，解决办法是给订餐页面的form一个id使jQuery修改该id的form的html页面值$("#bookForm").html()）
-3. 没有返回功能，用户体验不好
+3. 没有返回功能，用户体验不好（已解决,增加了一个position :fixed的a标签，可返回上一层路由）
 4. 进入订餐页面没有倒计时，显示菜单功能，要刷新才会显示（已解决，使用Vue的生命周期钩子，将jQuery代码放在mounted钩子下）
