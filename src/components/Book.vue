@@ -1,5 +1,6 @@
-<template onload="RefreshOnce()">
+<template>
 	<div>
+		<a @click="routerBack" class="backLast"></a>
 		<div class="time">
 			<h2>剩余点餐时间</h2><br />
 			<span id="hour"></span>
@@ -31,6 +32,11 @@ export default {
      // msg: 'Welcome to Your Vue.js App'
     }
   },
+  methods : {
+  	routerBack : function(){
+  		this.$router.go(-1)
+  	}
+  },
   mounted : function (){
   	$(function(){
 		var $min = $("#min")
@@ -53,6 +59,7 @@ export default {
 		var food_today
 		var result 								   //保存AJAX传来的菜单，并把它拼串成HTML
 		var lunch_name
+		//回到上页
 		//定时器
 		setInterval(function(){
 			my_date = new Date()
@@ -207,6 +214,7 @@ export default {
 		}
 	});
   }
+
 }
 </script>
 

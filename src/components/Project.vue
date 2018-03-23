@@ -1,5 +1,6 @@
 <template>
 	<div id="project">
+		<a @click="routerBack" class="backLast"></a>
 		<div id="projectTop">
 			<ul>
 				<li><router-link to="/projectOne">项目一</router-link></li>
@@ -14,6 +15,19 @@
 </template>
 
 <script>
+	export default {
+		name: 'Project',
+		data () {
+		    return {
+		     // msg: 'Welcome to Your Vue.js App'
+		    }
+		},
+		methods : {
+			routerBack : function(){
+				this.$router.go(-1)
+			}
+		}
+	}
 </script>
 
 <style scoped>
@@ -21,7 +35,7 @@
 	width: 90%;
 	height : 20.3rem;
 	border: double 1px;
-	margin: 2.5rem auto;
+	margin: 3rem auto;
 	font-size: 1.4rem;
 	text-indent: 1em;
 }	
